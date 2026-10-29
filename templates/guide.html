@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Guide Me | Personalized Career Advisor</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='guide.css') }}">
+</head>
+
+<body>
+
+    <!-- Background effects -->
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+
+    <!-- HEADER -->
+
+    <header class="guide-header">
+
+        <a href="/" class="brand">
+
+            <div class="brand-icon">
+                ✦
+            </div>
+
+            <div>
+                <h3>Personalized Career Advisor</h3>
+                <span>AI-powered career guidance</span>
+            </div>
+
+        </a>
+
+        <div class="header-right">
+
+            <span class="ai-dot"></span>
+
+            AI Career Assistant
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main class="guide-container">
+
+
+        <!-- PROGRESS -->
+
+        <div class="progress-section">
+
+            <div class="progress-top">
+
+                <span id="stageLabel">
+                    Student Details
+                </span>
+
+                <span id="stepNumber">
+                    1 / 3
+                </span>
+
+            </div>
+
+
+            <div class="progress-bar">
+
+                <div
+                    class="progress-fill"
+                    id="progressFill">
+                </div>
+
+            </div>
+
+
+            <div class="progress-steps">
+
+                <div class="progress-step active"
+                     id="progress1">
+
+                    <span>1</span>
+                    Student Details
+
+                </div>
+
+                <div class="progress-step"
+                     id="progress2">
+
+                    <span>2</span>
+                    Interests
+
+                </div>
+
+                <div class="progress-step"
+                     id="progress3">
+
+                    <span>3</span>
+                    Skills & Preferences
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTIONNAIRE CARD -->
+
+        <section class="question-card">
+
+
+            <!-- =========================
+                 STEP 1
+            ========================== -->
+
+            <div class="question-section active"
+                 id="step1">
+
+                <div class="section-icon">
+                    👋
+                </div>
+
+                <p class="eyebrow">
+                    LET'S GET TO KNOW YOU
+                </p>
+
+                <h1>
+                    Tell us a little<br>
+                    <span>about yourself.</span>
+                </h1>
+
+                <p class="section-description">
+                    This helps us understand your current
+                    academic stage and create more relevant
+                    career recommendations.
+                </p>
+
+
+                <!-- NAME -->
+
+                <div class="input-group">
+
+                    <label for="studentName">
+                        What should we call you?
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter your name">
+
+                </div>
+
+
+                <!-- CLASS -->
+
+                <div class="input-group">
+
+                    <label>
+                        What are you currently studying?
+                    </label>
+
+                    <div class="option-grid small-grid">
+
+                        <button
+                            class="option-card"
+                            data-field="class"
+                            data-value="9">
+
+                            <strong>Class 9</strong>
+
+                            <span>School</span>
+
+                        </button>
+
+
+                        <button
+                            class="option-card"
+                            data-field="class"
+                            data-value="10">
+
+                            <strong>Class 10</strong>
+
+                            <span>School</span>
+
+                        </button>
+
+
+                        <button
+                            class="option-card"
+                            data-field="class"
+                            data-value="11">
+
+                            <strong>Class 11</strong>
+
+                            <span>Senior Secondary</span>
+
+                        </button>
+
+
+                        <button
+                            class="option-card"
+                            data-field="class"
+                            data-value="12">
+
+                            <strong>Class 12</strong>
+
+                            <span>Senior Secondary</span>
+
+                        </button>
+
+
+                        <button
+                            class="option-card"
+                            data-field="class"
+                            data-value="College">
+
+                            <strong>College</strong>
+
+                            <span>Higher Education</span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STREAM -->
+
+                <div class="input-group">
+
+                    <label>
+                        Which stream are you from?
+                    </label>
+
+                    <div class="option-grid">
+
+                        <button
+                            class="option-card"
+                            data-field="stream"
+                            data-value="Science">
+
+                            <div class="option-icon">🔬</div>
+
+                            <strong>Science</strong>
+
+                        </button>
+
+
+                        <button
+                            class="option-card"
+                            data-field="stream"
+                            data-value="Commerce">
+
+                            <div class="option-icon">📊</div>
+
+                            <strong>Commerce</strong>
+
+                        </button>
+
+
+                        <button
+                            class="option-card"
+                            data-field="stream"
+                            data-value="Arts">
+
+                            <div class="option-icon">🎨</div>
+
+                            <strong>Arts / Humanities</strong>
+
+                        </button>
+
+
+                        <button
+                            class="option-card"
+                            data-field="stream"
+                            data-value="Other">
+
+                            <div class="option-icon">✨</div>
+
+                            <strong>Other</strong>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 STEP 2
+            ========================== -->
+
+            <div class="question-section"
+                 id="step2">
+
+                <div class="section-icon">
+                    ✨
+                </div>
+
+                <p class="eyebrow">
+                    DISCOVER YOUR INTERESTS
+                </p>
+
+                <h1>
+                    What naturally<br>
+                    <span>excites you?</span>
+                </h1>
+
+                <p class="section-description">
+                    Select the areas you enjoy or would
+                    genuinely like to explore.
+                </p>
+
+
+                <!-- SUBJECTS -->
+
+                <div class="input-group">
+
+                    <label>
+                        Which subjects do you enjoy?
+                        <small>Select all that apply</small>
+                    </label>
+
+                    <div class="option-grid">
+
+                        <button
+                            class="option-card multi"
+                            data-group="subjects"
+                            data-value="Mathematics">
+
+                            <div class="option-icon">📐</div>
+                            <strong>Mathematics</strong>
+
+                        </button>
+
+
+                        <button
+                            class="option-card multi"
+                            data-group="subjects"
+                            data-value="Computer Science">
+
+                            <div class="option-icon">💻</div>
+                            <strong>Computer Science</strong>
+
+                        </button>
+
+
+                        <button
+                            class="option-card multi"
+                            data-group="subjects"
+                            data-value="Physics">
+
+                            <div class="option-icon">⚡</div>
+                            <strong>Physics</strong>
+
+                        </button>
+
+
+                        <button
+                            class="option-card multi"
+                            data-group="subjects"
+                            data-value="Biology">
+
+                            <div class="option-icon">🧬</div>
+                            <strong>Biology</strong>
+
+                        </button>
+
+
+                        <button
+                            class="option-card multi"
+                            data-group="subjects"
+                            data-value="Economics">
+
+                            <div class="option-icon">📈</div>
+                            <strong>Economics</strong>
+
+                        </button>
+
+
+                        <button
+                            class="option-card multi"
+                            data-group="subjects"
+                            data-value="Psychology">
+
+                            <div class="option-icon">🧠</div>
+                            <strong>Psychology</strong>
+
+                        </button>
+
+
+                        <button
+                            class="option-card multi"
+                            data-group="subjects"
+                            data-value="English">
+
+                            <div class="option-icon">📚</div>
+                            <strong>English</strong>
+
+                        </button>
+
+
+                        <button
+                            class="option-card multi"
+                            data-group="subjects"
+                            data-value="History">
+
+                            <div class="option-icon">🏛️</div>
+                            <strong>History</strong>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CAREER DOMAINS -->
+
+                <div class="input-group">
+
+                    <label>
+                        Which career areas attract you?
+                        <small>Select up to 3</small>
+                    </label>
+
+                    <div class="option-grid">
+
+                        <button
+                            class="option-card domain multi"
+                            data-group="domains"
+                            data-value="Technology">
+
+                            <div class="option-icon">💻</div>
+                            <strong>Technology & AI</strong>
+
+                        </button>
+
+
+                        <button
+                            class="option-card domain multi"
+                            data-group="domains"
+                            data-value="Healthcare">
+
+                            <div class="option-icon">🩺</div>
+                            <strong>Healthcare</strong>
+
+                        </button>
+
+
+                        <button
+                            class="option-card domain multi"
+                            data-group="domains"
+                            data-value="Finance">
+
+                            <div class="option-icon">💰</div>
+                            <strong>Finance & Business</strong>
+
+                        </button>
+
+
+                        <button
+                            class="option-card domain multi"
+                            data-group="domains"
+                            data-value="Design">
+
+                            <div class="option-icon">🎨</div>
+                            <strong>Design & Creativity</strong>
+
+                        </button>
+
+
+                        <button
+                            class="option-card domain multi"
+                            data-group="domains"
+                            data-value="Law">
+
+                            <div class="option-icon">⚖️</div>
+                            <strong>Law & Justice</strong>
+
+                        </button>
+
+
+                        <button
+                            class="option-card domain multi"
+                            data-group="domains"
+                            data-value="Aerospace">
+
+                            <div class="option-icon">🚀</div>
+                            <strong>Aerospace</strong>
+
+                        </button>
+
+
+                        <button
+                            class="option-card domain multi"
+                            data-group="domains"
+                            data-value="Science">
+
+                            <div class="option-icon">🔬</div>
+                            <strong>Science & Research</strong>
+
+                        </button>
+
+
+                        <button
+                            class="option-card domain multi"
+                            data-group="domains"
+                            data-value="Media">
+
+                            <div class="option-icon">🎙️</div>
+                            <strong>Media & Communication</strong>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 STEP 3
+            ========================== -->
+
+            <div class="question-section"
+                 id="step3">
+
+                <div class="section-icon">
+                    🧠
+                </div>
+
+                <p class="eyebrow">
+                    UNDERSTAND YOUR STRENGTHS
+                </p>
+
+                <h1>
+                    How do you like<br>
+                    <span>to work?</span>
+                </h1>
+
+                <p class="section-description">
+                    There are no right or wrong answers.
+                    Choose what feels most natural to you.
+                </p>
+
+
+                <!-- SKILLS -->
+
+                <div class="input-group">
+
+                    <label>
+                        Rate your skills
+                        <small>1 = Beginner · 10 = Excellent</small>
+                    </label>
+
+
+                    <div class="rating-list">
+
+
+                        <div class="rating-row">
+
+                            <div>
+                                <strong>Problem Solving</strong>
+                                <span>Finding solutions to challenges</span>
+                            </div>
+
+                            <input
+                                type="range"
+                                min="1"
+                                max="10"
+                                value="7"
+                                id="problemSolving">
+
+                            <output id="problemSolvingValue">
+                                7
+                            </output>
+
+                        </div>
+
+
+                        <div class="rating-row">
+
+                            <div>
+                                <strong>Logical Reasoning</strong>
+                                <span>Thinking step-by-step</span>
+                            </div>
+
+                            <input
+                                type="range"
+                                min="1"
+                                max="10"
+                                value="7"
+                                id="logicalReasoning">
+
+                            <output id="logicalReasoningValue">
+                                7
+                            </output>
+
+                        </div>
+
+
+                        <div class="rating-row">
+
+                            <div>
+                                <strong>Creativity</strong>
+                                <span>Creating new ideas</span>
+                            </div>
+
+                            <input
+                                type="range"
+                                min="1"
+                                max="10"
+                                value="7"
+                                id="creativity">
+
+                            <output id="creativityValue">
+                                7
+                            </output>
+
+                        </div>
+
+
+                        <div class="rating-row">
+
+                            <div>
+                                <strong>Coding</strong>
+                                <span>Programming & technology</span>
+                            </div>
+
+                            <input
+                                type="range"
+                                min="1"
+                                max="10"
+                                value="7"
+                                id="coding">
+
+                            <output id="codingValue">
+                                7
+                            </output>
+
+                        </div>
+
+
+                        <div class="rating-row">
+
+                            <div>
+                                <strong>Communication</strong>
+                                <span>Expressing your ideas</span>
+                            </div>
+
+                            <input
+                                type="range"
+                                min="1"
+                                max="10"
+                                value="7"
+                                id="communication">
+
+                            <output id="communicationValue">
+                                7
+                            </output>
+
+                        </div>
+
+
+                        <div class="rating-row">
+
+                            <div>
+                                <strong>Public Speaking</strong>
+                                <span>Presenting to others</span>
+                            </div>
+
+                            <input
+                                type="range"
+                                min="1"
+                                max="10"
+                                value="7"
+                                id="publicSpeaking">
+
+                            <output id="publicSpeakingValue">
+                                7
+                            </output>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- WORK STYLE -->
+
+                <div class="input-group">
+
+                    <label>
+                        What kind of work attracts you?
+                    </label>
+
+                    <div class="option-grid">
+
+                        <button
+                            class="option-card"
+                            data-field="preferredWork"
+                            data-value="Software Development">
+
+                            <div class="option-icon">💻</div>
+                            <strong>Building Technology</strong>
+
+                        </button>
+
+
+                        <button
+                            class="option-card"
+                            data-field="preferredWork"
+                            data-value="Research">
+
+                            <div class="option-icon">🔬</div>
+                            <strong>Research & Experiments</strong>
+
+                        </button>
+
+
+                        <button
+                            class="option-card"
+                            data-field="preferredWork"
+                            data-value="Design">
+
+                            <div class="option-icon">🎨</div>
+                            <strong>Creating & Designing</strong>
+
+                        </button>
+
+
+                        <button
+                            class="option-card"
+                            data-field="preferredWork"
+                            data-value="Business">
+
+                            <div class="option-icon">🚀</div>
+                            <strong>Business & Leadership</strong>
+
+                        </button>
+
+
+                        <button
+                            class="option-card"
+                            data-field="preferredWork"
+                            data-value="Helping People">
+
+                            <div class="option-icon">🤝</div>
+                            <strong>Helping People</strong>
+
+                        </button>
+
+
+                        <button
+                            class="option-card"
+                            data-field="preferredWork"
+                            data-value="Analysis">
+
+                            <div class="option-icon">📊</div>
+                            <strong>Data & Analysis</strong>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- WORK STYLE -->
+
+                <div class="input-group">
+
+                    <label>
+                        Which work style sounds like you?
+                    </label>
+
+                    <div class="option-grid">
+
+                        <button
+                            class="option-card"
+                            data-field="workStyle"
+                            data-value="Technical">
+
+                            <strong>💻 Technical</strong>
+
+                            <span>Technology & systems</span>
+
+                        </button>
+
+
+                        <button
+                            class="option-card"
+                            data-field="workStyle"
+                            data-value="Analytical">
+
+                            <strong>🧠 Analytical</strong>
+
+                            <span>Data & research</span>
+
+                        </button>
+
+
+                        <button
+                            class="option-card"
+                            data-field="workStyle"
+                            data-value="Creative">
+
+                            <strong>🎨 Creative</strong>
+
+                            <span>Ideas & design</span>
+
+                        </button>
+
+
+                        <button
+                            class="option-card"
+                            data-field="workStyle"
+                            data-value="People">
+
+                            <strong>👥 People-focused</strong>
+
+                            <span>Communication & teamwork</span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EDUCATION -->
+
+                <div class="input-group">
+
+                    <label>
+                        What is your education goal?
+                    </label>
+
+                    <div class="option-grid">
+
+                        <button
+                            class="option-card"
+                            data-field="educationGoal"
+                            data-value="Higher Studies">
+
+                            <strong>🎓 Higher Studies</strong>
+
+                        </button>
+
+
+                        <button
+                            class="option-card"
+                            data-field="educationGoal"
+                            data-value="Professional Degree">
+
+                            <strong>📚 Professional Degree</strong>
+
+                        </button>
+
+
+                        <button
+                            class="option-card"
+                            data-field="educationGoal"
+                            data-value="Skill Based">
+
+                            <strong>🛠️ Skill Based</strong>
+
+                        </button>
+
+
+                        <button
+                            class="option-card"
+                            data-field="educationGoal"
+                            data-value="Not Sure">
+
+                            <strong>🤔 Not Sure Yet</strong>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+
+            <div class="navigation">
+
+                <button
+                    class="back-button"
+                    id="backButton">
+
+                    ← Back
+
+                </button>
+
+
+                <button
+                    class="continue-button"
+                    id="continueButton">
+
+                    Continue
+
+                    <span>→</span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="{{ url_for('static', filename='guide.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+proj_env/
+env/
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.vscode/
+tempCodeRunnerFile.py
+/python
+# Large machine learning model files
+
+models/career_model.pkl
+models/*.pkl

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personalized Career Advisor</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="bg-glow glow-left"></div>
+    <div class="bg-glow glow-right"></div>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            <div class="logo-symbol">✦</div>
+
+            <div>
+                <h3>Personalized Career Advisor</h3>
+                <span>AI-powered career guidance</span>
+            </div>
+        </div>
+
+        <div class="header-status">
+            <span class="status-dot"></span>
+            AI Career Assistant
+        </div>
+
+    </header>
+
+
+    <!-- Main -->
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-badge">
+                <span>✦</span>
+                YOUR PERSONAL CAREER COMPANION
+            </div>
+
+            <h1>
+                Personalized
+                <span>Career Advisor</span>
+            </h1>
+
+            <p class="hero-description">
+                Discover careers that match who you are,
+                what you enjoy, and where you want to go.
+            </p>
+
+            <p class="hero-subtext">
+                Get personalized career guidance or explore
+                career possibilities at your own pace.
+            </p>
+
+        </section>
+
+
+        <!-- TWO MODULES ONLY -->
+        <section class="modules">
+
+
+            <!-- =========================
+                 MODULE 1 : GUIDE ME
+            ========================== -->
+
+            <div class="module guide-module">
+
+                <div class="module-top">
+
+                    <div class="module-label guide-label">
+                        MODULE 01
+                    </div>
+
+                    <div class="module-icon">
+                        ✨
+                    </div>
+
+                </div>
+
+
+                <div class="module-content">
+
+                    <h2>Guide Me</h2>
+
+                    <p>
+                        Not sure which career is right for you?
+                        Answer a few meaningful questions about
+                        your interests, skills, subjects and goals.
+                    </p>
+
+
+                    <div class="feature-list">
+
+                        <div class="feature">
+                            <span>✓</span>
+                            Personalized career assessment
+                        </div>
+
+                        <div class="feature">
+                            <span>✓</span>
+                            AI-powered career recommendation
+                        </div>
+
+                        <div class="feature">
+                            <span>✓</span>
+                            Personalized career roadmap
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="module-bottom">
+
+                    <div class="module-description">
+                        <span class="mini-icon">✦</span>
+
+                        <div>
+                            <small>PERSONALIZED FOR YOU</small>
+                            <strong>Find your career direction</strong>
+                        </div>
+                    </div>
+
+                    <button
+                        class="module-button guide-button"
+                        onclick="startGuide()">
+
+                        Start Assessment
+
+                        <span>→</span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 MODULE 2 : EXPLORE
+            ========================== -->
+
+            <div class="module explore-module">
+
+                <div class="module-top">
+
+                    <div class="module-label explore-label">
+                        MODULE 02
+                    </div>
+
+                    <div class="domain-count">
+                        <span></span>
+                        40+ Career Domains
+                    </div>
+
+                </div>
+
+
+                <div class="module-content">
+
+                    <h2>Explore Career</h2>
+
+                    <p>
+                        Explore different career domains and
+                        discover the roles, skills, education
+                        and pathways connected to them.
+                    </p>
+
+
+                    <div class="career-tags">
+
+                        <span>Technology</span>
+                        <span>Healthcare</span>
+                        <span>Finance</span>
+                        <span>Design</span>
+                        <span>Law</span>
+                        <span>Aerospace</span>
+                        <span>Psychology</span>
+                        <span>Business</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="module-bottom">
+
+                    <div class="module-description">
+
+                        <span class="mini-icon explore-mini">
+                            ◇
+                        </span>
+
+                        <div>
+                            <small>DISCOVER POSSIBILITIES</small>
+                            <strong>Explore your options</strong>
+                        </div>
+
+                    </div>
+
+                    <button
+                        class="module-button explore-button"
+                        onclick="exploreCareers()">
+
+                        Explore Careers
+
+                        <span>→</span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <span>
+            © 2026 Personalized Career Advisor
+        </span>
+
+        <span>
+            AI • ML • Career Guidance
+        </span>
+
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

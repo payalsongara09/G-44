@@ -1,0 +1,297 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Career Roadmap | CareerPath AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='roadmap.css') }}">
+</head>
+
+<body>
+    <div style="background: yellow; color: black; padding: 15px;">
+    TEST: NEW ROADMAP PAGE IS LOADING
+</div>
+
+<div class="roadmap-page">
+
+    <!-- HEADER -->
+    <header class="roadmap-header">
+
+        <div class="brand">
+            <div class="brand-icon">✦</div>
+
+            <div>
+                <h2>CareerPath AI</h2>
+                <p>AI-powered personalized career guidance</p>
+            </div>
+        </div>
+
+        <button class="close-button"
+                type="button"
+                onclick="history.back()">
+            × Close
+        </button>
+
+    </header>
+
+
+    <!-- CAREER TITLE -->
+    <section class="career-intro">
+
+        <span class="career-label" id="careerDomain">
+            CAREER PROFILE
+        </span>
+
+        <h1 id="careerTitle">AI & Machine Learning Engineer</h1>
+
+        <p class="career-branch" id="careerBranch">
+            Artificial Intelligence & Machine Learning
+        </p>
+
+        <p class="career-description" id="careerDescription">
+            Explore the skills, educational pathways, responsibilities,
+            and practical experience needed to pursue your chosen career.
+        </p>
+
+    </section>
+
+
+    <!-- SALARY AND AI CAREER PLAN -->
+    <section class="career-highlights">
+
+        <div class="salary-card">
+
+            <span class="section-label">💰 SALARY & COMPENSATION OUTLOOK</span>
+
+            <h2 id="salaryRange">Explore salary opportunities</h2>
+
+            <p id="salaryDescription">
+                Compensation varies by experience, skills, location,
+                employer, and specialisation.
+            </p>
+
+        </div>
+
+        <div class="ai-plan-card">
+
+            <div>
+                <span class="section-label">✨ AI CAREER PLAN</span>
+
+                <p>
+                    Explore a personalized step-by-step plan for your
+                    selected career.
+                </p>
+            </div>
+
+            <button type="button"
+                    class="primary-button"
+                    id="generatePlanButton">
+                ✦ Get AI Roadmap
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- CAREER OVERVIEW -->
+    <section class="content-section">
+
+        <div class="section-heading">
+            <span class="section-icon">✦</span>
+
+            <div>
+                <h2>About the Career</h2>
+                <p>Understand the role and its purpose.</p>
+            </div>
+        </div>
+
+        <p class="body-copy" id="careerOverview">
+            Detailed career information will appear here.
+        </p>
+
+    </section>
+
+
+    <!-- RESPONSIBILITIES -->
+    <section class="content-section">
+
+        <div class="section-heading">
+            <span class="section-icon">◉</span>
+
+            <div>
+                <h2>What a Professional Does Day-to-Day</h2>
+                <p>Typical responsibilities and activities.</p>
+            </div>
+        </div>
+
+        <div id="responsibilitiesList" class="bullet-list"></div>
+
+    </section>
+
+
+    <!-- SUITABILITY AND SKILLS -->
+    <section class="two-column-grid">
+
+        <article class="info-card">
+
+            <div class="section-heading">
+                <span class="section-icon">♡</span>
+
+                <div>
+                    <h2>Who Will Enjoy This Career?</h2>
+                </div>
+            </div>
+
+            <div id="careerSuitability" class="bullet-list"></div>
+
+        </article>
+
+
+        <article class="info-card">
+
+            <div class="section-heading">
+                <span class="section-icon">✧</span>
+
+                <div>
+                    <h2>Required Core Skills</h2>
+                </div>
+            </div>
+
+            <div id="skillsList" class="skill-tags"></div>
+
+        </article>
+
+    </section>
+
+
+    <!-- EDUCATION AND ELIGIBILITY -->
+    <section class="education-panel">
+
+        <div class="section-heading">
+            <span class="section-icon">🎓</span>
+
+            <div>
+                <h2>Eligibility & Standard Educational Pathway</h2>
+                <p>Explore possible entry routes and admission requirements.</p>
+            </div>
+        </div>
+
+        <p class="body-copy" id="eligibilityText"></p>
+
+        <div class="education-divider"></div>
+
+        <div class="education-columns">
+
+            <div>
+                <h3>ENTRANCE EXAMS</h3>
+                <div id="entranceExams" class="tag-list"></div>
+            </div>
+
+            <div>
+                <h3>RECOMMENDED DEGREES / COURSES</h3>
+                <div id="recommendedCourses" class="tag-list"></div>
+            </div>
+
+        </div>
+
+        <p class="verification-note">
+            Admission criteria and entrance examinations vary by institution.
+            Verify current requirements through official sources.
+        </p>
+
+    </section>
+
+
+    <!-- FIVE-STAGE ROADMAP -->
+    <section class="content-section">
+
+        <div class="section-heading">
+            <span class="section-icon">🚀</span>
+
+            <div>
+                <h2>5-Stage Educational Roadmap</h2>
+                <p>Follow the pathway from school to professional experience.</p>
+            </div>
+        </div>
+
+        <div id="roadmapStages" class="roadmap-stages">
+
+            <!-- Populated by roadmap.js -->
+
+        </div>
+
+    </section>
+
+
+    <!-- RELATED CAREERS -->
+    <section class="content-section">
+
+        <div class="section-heading">
+            <span class="section-icon">↗</span>
+
+            <div>
+                <h2>Related Careers</h2>
+                <p>Explore other careers with similar skills and interests.</p>
+            </div>
+        </div>
+
+        <div id="relatedCareers" class="related-careers-grid"></div>
+
+    </section>
+
+
+    <!-- CAREER ACTIONS -->
+    <section class="bottom-actions">
+
+        <div>
+            <h2>Ready to plan your future?</h2>
+
+            <p>
+                Use this roadmap to explore your options and plan your next steps.
+            </p>
+        </div>
+
+        <div class="action-buttons">
+
+            <a href="/explore" class="secondary-button">
+                ← Explore Careers
+            </a>
+
+            <button type="button"
+                    id="downloadButton"
+                    class="primary-button">
+                ↓ Download Roadmap
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+        <p>
+            CareerPath AI · Personalized career exploration
+        </p>
+
+        <p>
+            Career guidance is informational. Verify eligibility,
+            admission requirements, salary information, and professional
+            requirements through reliable sources.
+        </p>
+    </footer>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='roadmap.js') }}?v=2"></script>
+
+
+</body>
+</html>
+```
